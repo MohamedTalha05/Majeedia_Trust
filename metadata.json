@@ -1,0 +1,6 @@
+{
+  "name": "Majeedia Trust",
+  "description": "A family-led charitable initiative focused on responsible, structured and sustainable giving.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
