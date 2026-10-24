@@ -6,7 +6,3 @@ coverage/
 *.log
 .env*
 !.env.example
-
-# Runtime content edited through the admin panel, contact messages and uploads
-/data/
-/uploads/
