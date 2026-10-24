@@ -1,0 +1,16 @@
+{
+  "contactEmail": "",
+  "contactNote": {
+    "en": ""
+  },
+  "facebookUrl": "",
+  "instagramUrl": "",
+  "linkedinUrl": "",
+  "youtubeUrl": "",
+  "supportButtonEnabled": true,
+  "supportButtonLabel": {
+    "en": "Donate"
+  },
+  "supportButtonUrl": "https://donate.myfundbox.com/multi?data=2Afko6t8UhbezCYW9xO40g",
+  "photosAreIllustrative": true
+}
