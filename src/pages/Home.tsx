@@ -1,5 +1,11 @@
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../locales';
+import heroImg from '../assets/images/hero_charitable_legacy_1792644492896.jpg';
+import widowImg from '../assets/images/widow_disability_support_1792645208660.jpg';
+import educationImg from '../assets/images/community_education_1792644492952.jpg';
+import girlsEducationImg from '../assets/images/girls_education_init_1792645209002.jpg';
+import communityImg from '../assets/images/community_support_1792644493806.jpg';
+import masjidImg from '../assets/images/masjid_community_1792645209276.jpg';
 
 export const Home = () => {
   const { language } = useLanguage();
@@ -9,7 +15,7 @@ export const Home = () => {
     <main className="bg-[#FBF9F5] text-stone-900">
       <section className="relative h-[60vh] flex items-center justify-center text-center overflow-hidden">
         <img 
-            src="/src/assets/images/hero_charitable_legacy_1792644492896.jpg" 
+            src={heroImg}
             alt="Family charitable initiative" 
             className="absolute inset-0 w-full h-full object-cover"
         />
@@ -36,15 +42,15 @@ export const Home = () => {
         <h2 className="text-3xl font-serif font-medium mb-12 text-stone-900">What We Support</h2>
         <div className="grid md:grid-cols-3 gap-8">
         {[
-          { title: "Widow Support", img: "/src/assets/images/widow_disability_support_1792645208660.jpg" },
-          { title: "Orphan & Child Education", img: "/src/assets/images/community_education_1792644492952.jpg" },
-          { title: "Madrasa Education", img: "/src/assets/images/community_education_1792644492952.jpg" },
-          { title: "Girls' Education", img: "/src/assets/images/girls_education_init_1792645209002.jpg" },
-          { title: "Disability Support", img: "/src/assets/images/widow_disability_support_1792645208660.jpg" },
-          { title: "Family Welfare", img: "/src/assets/images/community_support_1792644493806.jpg" },
-          { title: "Community Welfare", img: "/src/assets/images/community_support_1792644493806.jpg" },
-          { title: "Masjid Projects", img: "/src/assets/images/masjid_community_1792645209276.jpg" },
-          { title: "Other Initiatives", img: "/src/assets/images/hero_charitable_legacy_1792644492896.jpg" }
+          { title: "Widow Support", img: widowImg },
+          { title: "Orphan & Child Education", img: educationImg },
+          { title: "Madrasa Education", img: educationImg },
+          { title: "Girls' Education", img: girlsEducationImg },
+          { title: "Disability Support", img: widowImg },
+          { title: "Family Welfare", img: communityImg },
+          { title: "Community Welfare", img: communityImg },
+          { title: "Masjid Projects", img: masjidImg },
+          { title: "Other Initiatives", img: heroImg }
         ].map((item, idx) => (
           <div key={idx} className="border border-stone-200 p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow">
             <img src={item.img} alt={item.title} className="w-full h-48 object-cover rounded-lg mb-6" />
