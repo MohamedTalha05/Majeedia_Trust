@@ -1,0 +1,284 @@
+{
+  "hero-home": {
+    "width": 1600,
+    "height": 900,
+    "widths": [
+      800,
+      1400,
+      1600
+    ]
+  },
+  "banner-about": {
+    "width": 1600,
+    "height": 800,
+    "widths": [
+      800,
+      1400,
+      1600
+    ]
+  },
+  "banner-contact": {
+    "width": 1600,
+    "height": 800,
+    "widths": [
+      800,
+      1400,
+      1600
+    ]
+  },
+  "banner-get-involved": {
+    "width": 1600,
+    "height": 800,
+    "widths": [
+      800,
+      1400,
+      1600
+    ]
+  },
+  "banner-donations": {
+    "width": 1600,
+    "height": 800,
+    "widths": [
+      800,
+      1400,
+      1600
+    ]
+  },
+  "education-learning": {
+    "width": 1600,
+    "height": 1068,
+    "widths": [
+      480,
+      800,
+      1200
+    ]
+  },
+  "maintenance-volunteer": {
+    "width": 1600,
+    "height": 1067,
+    "widths": [
+      480,
+      800,
+      1200
+    ]
+  },
+  "sponsor-support": {
+    "width": 1600,
+    "height": 1067,
+    "widths": [
+      480,
+      800,
+      1200
+    ]
+  },
+  "medical-care": {
+    "width": 1600,
+    "height": 1004,
+    "widths": [
+      480,
+      800,
+      1200
+    ]
+  },
+  "girls-hifz": {
+    "width": 1600,
+    "height": 1060,
+    "widths": [
+      480,
+      800,
+      1200
+    ]
+  },
+  "community-charity": {
+    "width": 1600,
+    "height": 1132,
+    "widths": [
+      480,
+      800,
+      1200
+    ]
+  },
+  "volunteers-team": {
+    "width": 1600,
+    "height": 1067,
+    "widths": [
+      480,
+      800,
+      1200
+    ]
+  },
+  "volunteer-children": {
+    "width": 1600,
+    "height": 1067,
+    "widths": [
+      480,
+      800,
+      1200
+    ]
+  },
+  "helping-hands-laptop": {
+    "width": 1600,
+    "height": 1096,
+    "widths": [
+      480,
+      800,
+      1200
+    ]
+  },
+  "community-gathering": {
+    "width": 1600,
+    "height": 2301,
+    "widths": [
+      480,
+      800,
+      1200
+    ]
+  },
+  "children-slates": {
+    "width": 1600,
+    "height": 1200,
+    "widths": [
+      480,
+      800,
+      1200
+    ]
+  },
+  "classroom": {
+    "width": 1600,
+    "height": 1067,
+    "widths": [
+      480,
+      800,
+      1200
+    ]
+  },
+  "donation-boxes": {
+    "width": 1600,
+    "height": 1067,
+    "widths": [
+      480,
+      800,
+      1200
+    ]
+  },
+  "volunteer-sweeping": {
+    "width": 1600,
+    "height": 1067,
+    "widths": [
+      480,
+      800,
+      1200
+    ]
+  },
+  "tricycle-wheelchair": {
+    "width": 1600,
+    "height": 2400,
+    "widths": [
+      480,
+      800,
+      1200
+    ]
+  },
+  "child-wheelchair": {
+    "width": 1600,
+    "height": 2400,
+    "widths": [
+      480,
+      800,
+      1200
+    ]
+  },
+  "health-clinic": {
+    "width": 1600,
+    "height": 1199,
+    "widths": [
+      480,
+      800,
+      1200
+    ]
+  },
+  "blood-pressure-check": {
+    "width": 1600,
+    "height": 1146,
+    "widths": [
+      480,
+      800,
+      1200
+    ]
+  },
+  "girls-quran-reading": {
+    "width": 1600,
+    "height": 2400,
+    "widths": [
+      480,
+      800,
+      1200
+    ]
+  },
+  "elder-girls-reading": {
+    "width": 1600,
+    "height": 1067,
+    "widths": [
+      480,
+      800,
+      1200
+    ]
+  },
+  "food-donations": {
+    "width": 1600,
+    "height": 1066,
+    "widths": [
+      480,
+      800,
+      1200
+    ]
+  },
+  "flood-relief": {
+    "width": 1600,
+    "height": 1024,
+    "widths": [
+      480,
+      800,
+      1200
+    ]
+  },
+  "girl-with-books": {
+    "width": 1034,
+    "height": 1521,
+    "widths": [
+      400,
+      700
+    ]
+  },
+  "trust-prayer-hall": {
+    "width": 1280,
+    "height": 591,
+    "widths": [
+      480,
+      800
+    ]
+  },
+  "trust-girls-gathering": {
+    "width": 720,
+    "height": 1280,
+    "widths": [
+      480,
+      720
+    ]
+  },
+  "trust-computer-room": {
+    "width": 1280,
+    "height": 720,
+    "widths": [
+      480,
+      800
+    ]
+  },
+  "logo": {
+    "width": 480,
+    "height": 129,
+    "widths": [
+      480
+    ]
+  }
+}

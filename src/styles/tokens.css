@@ -1,0 +1,57 @@
+/* Design tokens – change brand colours, fonts and spacing here. */
+:root {
+  /* Backgrounds */
+  --ivory: #fbf8f2;
+  --cream: #f5ede0;
+  --beige: #ebdbc4; /* header */
+  --white: #ffffff;
+
+  /* Brand */
+  --forest: #003724;
+  --forest-hover: #0b4a32;
+  --forest-dark: #00281a;
+  --forest-tint: #e3ebe2;
+  --olive: #5c6b2e; /* accent text – 5:1 on ivory; do not use on beige */
+  --olive-light: #d9c9a3; /* accent on dark green */
+
+  /* Text */
+  --ink: #1e2a22;
+  --text: #36413a;
+  --muted: #5b635a;
+  --on-dark: #eee8db;
+
+  /* Lines and states */
+  --line: #e3d6c2;
+  --input-border: #8c8273;
+  --focus: #c26a12;
+  --success-bg: #e6f2ea;
+  --success: #1e4d30;
+  --error-bg: #fdecea;
+  --error: #a3200f;
+
+  /* Type */
+  --font-serif: 'Lora', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Open Sans', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+
+  /* Shape and spacing */
+  --radius: 8px;
+  --radius-lg: 12px;
+  --shadow: 0 1px 2px rgb(30 42 34 / 6%), 0 10px 28px rgb(30 42 34 / 7%);
+  --gutter: 16px;
+  --header-h: 72px;
+  --section-y: 56px;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --gutter: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --gutter: 32px;
+    --header-h: 84px;
+    --section-y: 88px;
+  }
+}
