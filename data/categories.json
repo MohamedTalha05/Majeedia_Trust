@@ -1,0 +1,249 @@
+[
+  {
+    "id": "widow-support",
+    "slug": {
+      "en": "widow-support"
+    },
+    "title": {
+      "en": "Widow Support"
+    },
+    "summary": {
+      "en": "Support for widows facing financial, family or essential living needs."
+    },
+    "description": {
+      "en": "Losing a spouse can bring sudden financial pressure and the responsibility of supporting a family alone. Majeedia Trust supports widows facing financial, family or essential living needs.\n\nEach situation is assessed with care and in confidence, and support is given discreetly so that the privacy and dignity of every woman and her family are protected."
+    },
+    "image": "/images/widow-support",
+    "imageAlt": {
+      "en": "A woman in a headscarf, seen from behind"
+    },
+    "icon": "heart-handshake",
+    "projectCategories": [
+      "widow-support"
+    ],
+    "currentInitiatives": {
+      "en": ""
+    },
+    "impact": {
+      "en": ""
+    },
+    "order": 1,
+    "published": true
+  },
+  {
+    "id": "education",
+    "slug": {
+      "en": "education"
+    },
+    "title": {
+      "en": "Education"
+    },
+    "summary": {
+      "en": "Support for children and students, including orphans, who need assistance with their education."
+    },
+    "description": {
+      "en": "Education opens doors that last a lifetime. Majeedia Trust supports children and students who need assistance with their education, including orphans and children whose families face difficult circumstances.\n\nSupport is assessed individually so that it meets a real educational need and helps a young person continue learning."
+    },
+    "image": "/images/children-learning",
+    "imageAlt": {
+      "en": "Children sitting on the carpet of a mosque as a teacher writes on the blackboard, the girls in headscarves"
+    },
+    "icon": "book-open",
+    "projectCategories": [
+      "education"
+    ],
+    "currentInitiatives": {
+      "en": ""
+    },
+    "impact": {
+      "en": ""
+    },
+    "order": 2,
+    "published": true
+  },
+  {
+    "id": "madrasa-education",
+    "slug": {
+      "en": "madrasa-education"
+    },
+    "title": {
+      "en": "Madrasa Education"
+    },
+    "summary": {
+      "en": "Support for madrasa education, students and related educational needs."
+    },
+    "description": {
+      "en": "Religious learning has an important place in many families and communities. Majeedia Trust supports madrasa education, its students and related educational needs.\n\nAs with all support, needs are assessed before resources are allocated."
+    },
+    "image": "/images/madrasa-learning",
+    "imageAlt": {
+      "en": "Seen from above, two girls in headscarves reading the Quran on prayer mats"
+    },
+    "icon": "book-marked",
+    "projectCategories": [
+      "madrasa"
+    ],
+    "currentInitiatives": {
+      "en": ""
+    },
+    "impact": {
+      "en": ""
+    },
+    "order": 3,
+    "published": true
+  },
+  {
+    "id": "girls-education",
+    "slug": {
+      "en": "girls-education"
+    },
+    "title": {
+      "en": "Girls’ Education"
+    },
+    "summary": {
+      "en": "Support for initiatives that help girls access and continue education."
+    },
+    "description": {
+      "en": "When girls are able to learn, whole families and communities benefit. Majeedia Trust supports initiatives that help girls access education and continue it.\n\nSupport is considered carefully, with the aim of helping girls stay in education for the long term."
+    },
+    "image": "/images/girls-education",
+    "imageAlt": {
+      "en": "Girls in headscarves writing in their exercise books at a classroom desk"
+    },
+    "icon": "graduation-cap",
+    "projectCategories": [
+      "girls-education"
+    ],
+    "currentInitiatives": {
+      "en": ""
+    },
+    "impact": {
+      "en": ""
+    },
+    "order": 4,
+    "published": true
+  },
+  {
+    "id": "disability-support",
+    "slug": {
+      "en": "disability-support"
+    },
+    "title": {
+      "en": "Disability Support"
+    },
+    "summary": {
+      "en": "Support for people with disabilities and families dealing with disability-related needs."
+    },
+    "description": {
+      "en": "Disability can bring additional costs and challenges for individuals and the families who care for them. Majeedia Trust supports people with disabilities and families dealing with disability-related needs.\n\nWe approach every request with respect, focusing on practical support that helps people live with greater independence and dignity."
+    },
+    "image": "/images/disability-support",
+    "imageAlt": {
+      "en": "Two women in headscarves helping a woman in a wheelchair along a sandy path"
+    },
+    "icon": "accessibility",
+    "projectCategories": [
+      "disability-support"
+    ],
+    "currentInitiatives": {
+      "en": ""
+    },
+    "impact": {
+      "en": ""
+    },
+    "order": 5,
+    "published": true
+  },
+  {
+    "id": "family-community-welfare",
+    "slug": {
+      "en": "family-community-welfare"
+    },
+    "title": {
+      "en": "Family & Community Welfare"
+    },
+    "summary": {
+      "en": "Support for carefully assessed family and community welfare requirements."
+    },
+    "description": {
+      "en": "Families sometimes face circumstances they cannot manage alone, and communities have shared needs that benefit everyone. Majeedia Trust supports carefully assessed family and community welfare requirements.\n\nEach request is considered on its own merits, with the aim of providing meaningful and responsible help."
+    },
+    "image": "/images/community-welfare",
+    "imageAlt": {
+      "en": "Three young women in headscarves smiling as they read a sheet of paper together"
+    },
+    "icon": "users",
+    "projectCategories": [
+      "welfare",
+      "community"
+    ],
+    "currentInitiatives": {
+      "en": ""
+    },
+    "impact": {
+      "en": ""
+    },
+    "order": 6,
+    "published": true
+  },
+  {
+    "id": "masjid-projects",
+    "slug": {
+      "en": "masjid-projects"
+    },
+    "title": {
+      "en": "Masjid Projects"
+    },
+    "summary": {
+      "en": "Support for selected mosque and community infrastructure projects."
+    },
+    "description": {
+      "en": "A masjid is often a centre of community life: a place of prayer, learning and gathering. Majeedia Trust supports selected mosque and community infrastructure projects.\n\nProjects are selected carefully, and their costs, including maintenance, are recorded as part of the family fund’s documentation."
+    },
+    "image": "/images/masjid-community",
+    "imageAlt": {
+      "en": "Families walking towards a brick mosque with a minaret and a softly lit entrance at sunset"
+    },
+    "icon": "landmark",
+    "projectCategories": [
+      "masjid"
+    ],
+    "currentInitiatives": {
+      "en": ""
+    },
+    "impact": {
+      "en": ""
+    },
+    "order": 7,
+    "published": true
+  },
+  {
+    "id": "other-initiatives",
+    "slug": {
+      "en": "other-charitable-initiatives"
+    },
+    "title": {
+      "en": "Other Charitable Initiatives"
+    },
+    "summary": {
+      "en": "Support for additional causes identified and assessed by the family and the Trust."
+    },
+    "description": {
+      "en": "Not every genuine need fits neatly into a category. Majeedia Trust may also support additional charitable causes that are identified and assessed by the family and the Trust.\n\nThe same principles apply: careful assessment, responsible allocation and accurate records."
+    },
+    "image": "/images/charitable-giving",
+    "imageAlt": {
+      "en": "Women in headscarves handing out bags of food and supplies under a tree"
+    },
+    "icon": "sparkles",
+    "projectCategories": [],
+    "currentInitiatives": {
+      "en": ""
+    },
+    "impact": {
+      "en": ""
+    },
+    "order": 8,
+    "published": true
+  }
+]
