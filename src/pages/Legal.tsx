@@ -1,0 +1,111 @@
+import { Info } from 'lucide-react';
+import { Fragment } from 'react';
+import { href } from '../../shared/routes';
+import type { LegalInfo } from '../../shared/types';
+import { CtaLink, PageHeader, Value } from '../components/ui';
+import { IMPRINT, PRIVACY, type LegalText } from '../i18n/legal-texts';
+import { tx, useApp } from '../lib/app-context';
+
+const LEGAL_FIELDS = [
+  'legalName',
+  'registrationType',
+  'registrationNumber',
+  'jurisdiction',
+  'establishedDate',
+  'trustees',
+  'registeredAddress',
+  'charitableStatus',
+  'taxStatus',
+  'donationEligibility',
+  'zakatGovernance',
+] as const satisfies readonly (keyof LegalInfo)[];
+
+export function LegalStatus() {
+  const { lang, t, content } = useApp();
+  const l = t.legal;
+  return (
+    <>
+      <PageHeader eyebrow={l.eyebrow} title={l.title} lead={l.lead} />
+      <section className="py-14 sm:py-20">
+        <div className="container-site max-w-4xl">
+          <p className="flex items-start gap-3 rounded-2xl border border-brass/40 bg-white p-5 text-[0.95rem]">
+            <Info aria-hidden className="mt-0.5 size-5 shrink-0 text-brass-deep" />
+            {l.note}
+          </p>
+          <dl className="mt-10 divide-y divide-line overflow-hidden rounded-2xl border border-line bg-white shadow-card">
+            {LEGAL_FIELDS.map((key) => (
+              <div key={key} className="grid gap-1 px-6 py-4 sm:grid-cols-3 sm:gap-6">
+                <dt className="font-medium text-ink">{l.fields[key]}</dt>
+                <dd className="whitespace-pre-line sm:col-span-2">
+                  <Value>{tx(content.legal[key], lang)}</Value>
+                </dd>
+              </div>
+            ))}
+          </dl>
+          <div className="mt-10">
+            <CtaLink to={href(lang, 'contact')} variant="secondary">
+              {t.common.contactTrust}
+            </CtaLink>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
+
+function LegalDocument({ title, text }: { title: string; text: LegalText }) {
+  const { lang, content } = useApp();
+  const legal = content.legal;
+  const values: Record<string, string> = {
+    controller: tx(legal.privacyController, lang),
+    email: content.settings.contactEmail,
+    hosting: tx(legal.hostingProvider, lang),
+    legalName: tx(legal.legalName, lang),
+    address: tx(legal.registeredAddress, lang),
+    representative: tx(legal.imprintRepresentative, lang),
+    phone: legal.imprintPhone,
+    imprintEmail: legal.imprintEmail || content.settings.contactEmail,
+    register: tx(legal.imprintRegister, lang),
+    vat: legal.imprintVatId,
+    contentResponsible: tx(legal.imprintContentResponsible, lang),
+  };
+  const fill = (paragraph: string) =>
+    paragraph.split(/(\{\w+\})/).map((part, i) => {
+      const token = part.match(/^\{(\w+)\}$/)?.[1];
+      return <Fragment key={i}>{token ? <Value>{values[token]}</Value> : part}</Fragment>;
+    });
+
+  return (
+    <>
+      <PageHeader eyebrow={title} title={title} />
+      <section className="py-14 sm:py-20">
+        <div className="container-site max-w-3xl">
+          <p className="flex items-start gap-3 rounded-2xl border border-brass/40 bg-white p-5 text-[0.95rem]">
+            <Info aria-hidden className="mt-0.5 size-5 shrink-0 text-brass-deep" />
+            {text.notice}
+          </p>
+          {text.sections.map((s) => (
+            <section key={s.title} className="mt-10">
+              <h2 className="text-2xl font-medium">{s.title}</h2>
+              <div className="prose-site mt-4 whitespace-pre-line">
+                {s.paragraphs.map((p) => (
+                  <p key={p}>{fill(p)}</p>
+                ))}
+              </div>
+            </section>
+          ))}
+        </div>
+      </section>
+    </>
+  );
+}
+
+export function Privacy() {
+  const { lang, t } = useApp();
+  return <LegalDocument title={t.nav.privacy} text={PRIVACY[lang]} />;
+}
+
+export function Imprint() {
+  const { lang, t } = useApp();
+  return <LegalDocument title={t.nav.imprint} text={IMPRINT[lang]} />;
+}
