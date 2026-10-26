@@ -1,3 +1,5 @@
+// DISABLED: not used by the static GitHub Pages build (see README "Static deployment").
+// Kept so the admin panel, contact API and JSON data store can be switched back on later.
 // Admin panel: a simple CMS for family administrators. Forms are generated from shared/schema.ts.
 import '../index.css';
 import { Download, ExternalLink, Inbox, LogOut, Pencil, Plus, Trash2 } from 'lucide-react';

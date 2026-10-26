@@ -1,4 +1,12 @@
-# Majeedia Trust website
+# Majeedia Trust
+
+> **Static deployment (current setup).** The site is published to GitHub Pages as a static site.
+> `npm run build` pre-renders every page from `data/*.json` into `dist/` (plus `404.html`, `sitemap.xml`, `robots.txt`), and
+> `.github/workflows/deploy.yml` publishes it on every push to `main`. Use `npm run dev` to work locally.
+>
+> **Disabled for now** (code kept, marked `DISABLED`): the Express server and its JSON data store (`server/`), the admin panel
+> (`src/admin/`, `/admin`) and the contact form (`src/pages/Contact.tsx`, which needs `/api/contact`). Content is edited directly in
+> `data/*.json` and goes live on the next push. The sections below describe the full server setup for when it is switched back on. website
 
 English website and content management system for **Majeedia Trust**, a family-led charitable initiative focused on responsible, structured and sustainable giving.
 

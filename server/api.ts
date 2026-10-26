@@ -1,3 +1,5 @@
+// DISABLED: not used by the static GitHub Pages build (see README "Static deployment").
+// Kept so the admin panel, contact API and JSON data store can be switched back on later.
 // REST API: public content + contact form, and the authenticated admin CMS endpoints.
 import { randomUUID } from 'node:crypto';
 import { mkdir, writeFile } from 'node:fs/promises';

@@ -1,3 +1,5 @@
+// DISABLED: not used by the static GitHub Pages build (see README "Static deployment").
+// Kept so the admin panel, contact API and JSON data store can be switched back on later.
 // JSON-file content store. Each collection lives in DATA_DIR/<key>.json and is seeded
 // from server/seed on first start. Writes are atomic (temp file + rename) and serialised.
 import { existsSync } from 'node:fs';

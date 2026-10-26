@@ -19,11 +19,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: oven-sh/setup-bun@v2
-      - run: bun install --frozen-lockfile
-      - run: bun run build
-      # SPA fallback: GitHub Pages serves 404.html for unknown paths, so deep links load the app
-      - run: cp dist/index.html dist/404.html
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      # Builds the static site: every page is pre-rendered to HTML, plus 404.html, sitemap.xml and robots.txt.
+      - run: npm run build
+        env:
+          SITE_URL: https://web.majeedia.org
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

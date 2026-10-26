@@ -469,6 +469,8 @@ export const en = {
     lead: 'We welcome questions about our work, our approach and our long-term plans.',
     emailLabel: 'Email',
     formTitle: 'Send us a message',
+    formUnavailable: 'Our online contact form is temporarily unavailable. Please write to us by email and we will reply as soon as we can.',
+    emailUs: 'Email us',
     name: 'Your name',
     email: 'Your email address',
     subject: 'Subject',
@@ -477,7 +479,7 @@ export const en = {
       'I agree that my details will be used to respond to my enquiry. More information in the privacy policy.',
     privacyLink: 'privacy policy',
     sensitive:
-      'Please do not send sensitive information such as identification documents or bank details through this form.',
+      'Please do not send sensitive information such as identification documents or bank details in your message.',
     send: 'Send message',
     sending: 'Sending…',
     success: 'Thank you. Your message has been received and we will reply as soon as possible.',

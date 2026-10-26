@@ -1,12 +1,13 @@
 node_modules/
 build/
 dist/
+dist-ssr/
 coverage/
 .DS_Store
 *.log
 .env*
 !.env.example
 
-# Runtime content edited through the admin panel, contact messages and uploads
-/data/
+# data/*.json is the site content for the static build and is committed.
+# Uploads from the (currently disabled) admin panel:
 /uploads/

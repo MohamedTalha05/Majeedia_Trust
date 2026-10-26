@@ -1,3 +1,5 @@
+// DISABLED: not used by the static GitHub Pages build (see README "Static deployment").
+// Kept so the admin panel, contact API and JSON data store can be switched back on later.
 // Express server: API, uploads, sitemap/robots and server-side rendering of the React site.
 import 'dotenv/config';
 import { readFile } from 'node:fs/promises';
