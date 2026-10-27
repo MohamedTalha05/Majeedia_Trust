@@ -40,6 +40,7 @@ const NAV_LABEL: Record<PageKey, keyof (typeof DICTS)['en']['nav']> = {
   legal: 'legal',
   privacy: 'privacy',
   imprint: 'imprint',
+  terms: 'terms',
 };
 
 /** Resolve the detail item (support area or update) a URL refers to. */
@@ -88,7 +89,7 @@ export function buildHead(url: string, content: PublicContent, config: SiteConfi
   const updateImage = match.key === 'updateDetail' && detail && 'image' in detail && detail.image ? detail.image : '';
   const ogImage = abs(updateImage && updateImage.startsWith('/') ? updateImage : '/og-image.jpg');
 
-  const sameAs = [settings.facebookUrl, settings.instagramUrl, settings.linkedinUrl, settings.youtubeUrl].filter(Boolean);
+  const sameAs = [settings.facebookUrl, settings.instagramUrl, settings.linkedinUrl, settings.youtubeUrl, settings.xUrl].filter(Boolean);
   const organization: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'Organization',

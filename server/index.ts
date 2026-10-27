@@ -41,6 +41,7 @@ app.use(
             imgSrc: ["'self'", 'data:', 'https:'],
             fontSrc: ["'self'"],
             connectSrc: ["'self'"],
+            frameSrc: ['https://donate.myfundbox.com'],
             frameAncestors: ["'none'"],
             formAction: ["'self'"],
             objectSrc: ["'none'"],

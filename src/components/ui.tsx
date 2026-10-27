@@ -114,8 +114,7 @@ export function Img({
       loading={priority ? 'eager' : 'lazy'}
       fetchPriority={priority ? 'high' : undefined}
       decoding="async"
-      // Local photos are converted to black & white when processed; external images get the same look via CSS.
-      className={`object-cover ${builtIn || src.startsWith('/uploads/') ? '' : 'grayscale'} ${className}`}
+      className={`object-cover ${className}`}
     />
   );
 }

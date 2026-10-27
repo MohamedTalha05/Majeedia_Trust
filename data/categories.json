@@ -5,17 +5,17 @@
       "en": "widow-support"
     },
     "title": {
-      "en": "Widow Support"
+      "en": "Medical Support - Sponsorship"
     },
     "summary": {
-      "en": "Support for widows facing financial, family or essential living needs."
+      "en": "Sponsorship for individuals and families facing essential medical needs."
     },
     "description": {
-      "en": "Losing a spouse can bring sudden financial pressure and the responsibility of supporting a family alone. Majeedia Trust supports widows facing financial, family or essential living needs.\n\nEach situation is assessed with care and in confidence, and support is given discreetly so that the privacy and dignity of every woman and her family are protected."
+      "en": "Illness or injury can bring sudden costs that a family is unable to meet alone. Majeedia Trust sponsors individuals and families facing essential medical needs.\n\nEach situation is assessed with care and in confidence, and support is given discreetly so that the privacy and dignity of every patient and their family are protected."
     },
-    "image": "/images/widow-support",
+    "image": "/images/medical-support",
     "imageAlt": {
-      "en": "A woman in a headscarf, seen from behind"
+      "en": "A doctor with a stethoscope talking with a patient across a desk in a hospital consulting room"
     },
     "icon": "heart-handshake",
     "projectCategories": [
@@ -98,13 +98,13 @@
       "en": "girls-education"
     },
     "title": {
-      "en": "Girls’ Education"
+      "en": "Girls-Hifz-Sponsorship"
     },
     "summary": {
-      "en": "Support for initiatives that help girls access and continue education."
+      "en": "Sponsorship for girls memorising the Holy Quran through Hifz programmes."
     },
     "description": {
-      "en": "When girls are able to learn, whole families and communities benefit. Majeedia Trust supports initiatives that help girls access education and continue it.\n\nSupport is considered carefully, with the aim of helping girls stay in education for the long term."
+      "en": "Memorising the Holy Quran is a lifelong blessing for a girl, her family and her community. Majeedia Trust sponsors girls enrolled in Hifz programmes so that they can continue their memorisation.\n\nSupport is considered carefully, with the aim of helping each girl complete her Hifz with dignity and consistency."
     },
     "image": "/images/girls-education",
     "imageAlt": {
@@ -223,17 +223,17 @@
       "en": "other-charitable-initiatives"
     },
     "title": {
-      "en": "Other Charitable Initiatives"
+      "en": "School - Maintenance Sponsorship"
     },
     "summary": {
-      "en": "Support for additional causes identified and assessed by the family and the Trust."
+      "en": "Sponsorship for the upkeep and maintenance of schools serving the community."
     },
     "description": {
-      "en": "Not every genuine need fits neatly into a category. Majeedia Trust may also support additional charitable causes that are identified and assessed by the family and the Trust.\n\nThe same principles apply: careful assessment, responsible allocation and accurate records."
+      "en": "A safe, well-kept school helps children learn and teachers teach. Majeedia Trust sponsors the maintenance and upkeep of schools that serve the community.\n\nThe same principles apply: careful assessment, responsible allocation and accurate records."
     },
-    "image": "/images/charitable-giving",
+    "image": "/images/school-maintenance",
     "imageAlt": {
-      "en": "Women in headscarves handing out bags of food and supplies under a tree"
+      "en": "A newly rebuilt two-storey school building with brick columns and freshly painted walls"
     },
     "icon": "sparkles",
     "projectCategories": [],

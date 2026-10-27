@@ -1,10 +1,12 @@
-import { Mail, ShieldAlert } from 'lucide-react';
+import { CheckCircle2, Mail, MapPin, Phone, Share2, ShieldAlert } from 'lucide-react';
+import { useState, type FormEvent } from 'react';
 // DISABLED for the static GitHub Pages build (the contact form posts to the server's /api/contact):
 // import { CheckCircle2 } from 'lucide-react';
 // import { useState, type FormEvent } from 'react';
 // import { Link } from 'react-router-dom';
 // import { href } from '../../shared/routes';
 import { FaqList } from '../components/content';
+import { SocialLinks } from '../components/SocialLinks';
 import { PageHeader, Value } from '../components/ui';
 import { tx, useApp } from '../lib/app-context';
 
@@ -64,12 +66,60 @@ export function Contact() {
 
   const email = content.settings.contactEmail;
 
+  // Static site: there is no server to post to, so a valid form opens the visitor's email app pre-filled.
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [sent, setSent] = useState(false);
+
+  function onSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const data = new FormData(e.currentTarget);
+    const get = (key: string) => String(data.get(key) ?? '').trim();
+    const values = { name: get('name'), email: get('email'), phone: get('phone').replace(/[\s-]/g, ''), help: get('help'), message: get('message') };
+
+    const next: Record<string, string> = {};
+    if (!values.name) next.name = c.formRequired;
+    if (!values.email) next.email = c.formRequired;
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(values.email)) next.email = c.formInvalidEmail;
+    if (!values.phone) next.phone = c.formRequired;
+    else if (!/^[6-9]\d{9}$/.test(values.phone)) next.phone = c.formInvalidPhone;
+    if (!values.message) next.message = c.formRequired;
+    setErrors(next);
+    if (Object.keys(next).length > 0) return;
+
+    const body = [
+      `Name: ${values.name}`,
+      `Email: ${values.email}`,
+      `Phone: +91 ${values.phone}`,
+      ...(values.help ? [`How I would like to help: ${values.help}`] : []),
+      '',
+      values.message,
+    ].join('\n');
+    const subject = `Website enquiry from ${values.name}`;
+    window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    e.currentTarget.reset();
+    setSent(true);
+  }
+
+  const field =
+    'w-full rounded-md border border-[#b9bcc4] bg-[#f9f9f9] px-3 py-2.5 text-[0.95rem] text-ink placeholder:text-[#7a7f87] focus:border-brass-deep focus:outline-none aria-[invalid=true]:border-red-700';
+  const fieldError = (key: string) =>
+    errors[key] ? { 'aria-invalid': true, 'aria-describedby': `${key}-error` } : {};
+  const errorText = (key: string) =>
+    errors[key] && (
+      <p id={`${key}-error`} className="mt-1 text-sm text-red-800">
+        {errors[key]}
+      </p>
+    );
+
+  const address = content.settings.contactAddress;
+  const phones = content.settings.contactPhones ?? [];
+
   return (
     <>
       <PageHeader eyebrow={c.eyebrow} title={c.title} lead={c.lead} />
-      <section className="py-14 sm:py-20">
-        <div className="container-site grid gap-12 lg:grid-cols-12">
-          <aside className="space-y-6 lg:col-span-4">
+      <section className="py-10 sm:py-14">
+        <div className="container-site grid max-w-6xl gap-8 lg:grid-cols-12 lg:items-center lg:gap-10">
+          <aside className="space-y-4 lg:col-span-5">
             <div className="rounded-2xl border border-line bg-white p-6 shadow-card">
               <Mail aria-hidden className="size-6 text-brass-deep" />
               <h2 className="mt-4 text-lg font-medium">{c.emailLabel}</h2>
@@ -84,25 +134,93 @@ export function Contact() {
               </p>
               {tx(content.settings.contactNote, lang) && <p className="mt-4 text-[0.95rem] text-muted">{tx(content.settings.contactNote, lang)}</p>}
             </div>
+            {phones.length > 0 && (
+              <div className="rounded-2xl border border-line bg-white p-6 shadow-card">
+                <Phone aria-hidden className="size-6 text-brass-deep" />
+                <h2 className="mt-4 text-lg font-medium">{c.phonesLabel}</h2>
+                <ul className="mt-1 space-y-1">
+                  {phones.map((phone) => (
+                    <li key={phone}>
+                      <a href={`tel:${phone.replace(/[^+\d]/g, '')}`} className="text-brass-deep underline-offset-4 hover:underline">
+                        {phone}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {address && (
+              <div className="rounded-2xl border border-line bg-white p-6 shadow-card">
+                <MapPin aria-hidden className="size-6 text-brass-deep" />
+                <h2 className="mt-4 text-lg font-medium">{c.addressLabel}</h2>
+                <p className="mt-1">{address}</p>
+              </div>
+            )}
+            <div className="rounded-2xl border border-line bg-white p-6 shadow-card">
+              <Share2 aria-hidden className="size-6 text-brass-deep" />
+              <h2 className="mt-4 text-lg font-medium">{c.connectLabel}</h2>
+              <div className="mt-3">
+                <SocialLinks label={c.connectLabel} linkClassName="bg-sand text-brass-deep hover:bg-brass-deep hover:text-ivory" />
+              </div>
+            </div>
             <p className="flex items-start gap-3 rounded-2xl bg-sand p-5 text-sm">
               <ShieldAlert aria-hidden className="mt-0.5 size-5 shrink-0 text-brass-deep" />
               {c.sensitive}
             </p>
           </aside>
 
-          <div className="lg:col-span-8">
-            <div className="rounded-2xl border border-line bg-white p-6 shadow-card sm:p-10">
-              <h2 className="text-2xl font-medium">{c.formTitle}</h2>
-              <p className="mt-4 text-lg">{c.formUnavailable}</p>
-              {email && (
-                <a
-                  href={`mailto:${email}`}
-                  className="mt-6 inline-flex items-center gap-2 rounded-full bg-ink px-7 py-3 font-semibold text-ivory transition-colors hover:bg-deep-2"
-                >
-                  <Mail aria-hidden className="size-4" />
-                  {c.emailUs}
-                </a>
-              )}
+          <div className="flex justify-center lg:col-span-7">
+            <div className="w-full max-w-xl">
+              <p className="text-sm font-bold uppercase tracking-[0.08em] text-brass-deep">{c.formEyebrow}</p>
+              <h2 className="mt-3 text-3xl font-semibold text-ink sm:text-4xl">{c.formHeading}</h2>
+              <p className="mt-4 leading-relaxed text-ink">{c.formIntro}</p>
+
+              <div className="mt-5 rounded-md bg-white p-4 sm:p-5">
+                {sent && (
+                  <p role="status" className="mb-6 flex items-start gap-3 rounded-md bg-sage/10 p-4 text-sm text-ink">
+                    <CheckCircle2 aria-hidden className="mt-0.5 size-5 shrink-0 text-sage" />
+                    {c.formSent}
+                  </p>
+                )}
+                <form onSubmit={onSubmit} noValidate className="space-y-4">
+                  <div>
+                    <label htmlFor="name" className="sr-only">{c.formName}</label>
+                    <input id="name" name="name" placeholder={`${c.formNameShort} *`} maxLength={200} autoComplete="name" className={field} {...fieldError('name')} />
+                    {errorText('name')}
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="sr-only">{c.formEmail}</label>
+                    <input id="email" name="email" type="email" placeholder={`${c.formEmailShort} *`} maxLength={254} autoComplete="email" className={field} {...fieldError('email')} />
+                    {errorText('email')}
+                  </div>
+                  <div>
+                    <label htmlFor="phone" className="sr-only">{c.formPhone}</label>
+                    <div className="relative">
+                      <span aria-hidden className="pointer-events-none absolute inset-y-0 left-3 flex items-center gap-1.5 text-[0.95rem] text-ink-soft">
+                        <span className="text-base leading-none">🇮🇳</span>+91
+                      </span>
+                      <input id="phone" name="phone" type="tel" inputMode="numeric" placeholder={`${c.formPhone} *`} maxLength={14} autoComplete="tel-national" className={`${field} pl-[4.5rem]`} {...fieldError('phone')} />
+                    </div>
+                    {errorText('phone')}
+                  </div>
+                  <div>
+                    <label htmlFor="help" className="sr-only">{c.formHelp}</label>
+                    <input id="help" name="help" placeholder={c.formHelp} maxLength={300} className={field} />
+                  </div>
+                  <div>
+                    <label htmlFor="message" className="sr-only">{c.formMessage}</label>
+                    <textarea id="message" name="message" placeholder={`${c.formMessage} *`} rows={4} maxLength={5000} className={field} {...fieldError('message')} />
+                    {errorText('message')}
+                  </div>
+                  <button
+                    type="submit"
+                    className="rounded-md bg-brass-deep px-3.5 py-2 text-[0.95rem] text-white transition-colors hover:bg-deep-2"
+                  >
+                    {c.formSend}
+                  </button>
+                </form>
+              </div>
+            </div>
               {/*
                 DISABLED for the static GitHub Pages build: the form needs the server's /api/contact endpoint.
 
@@ -174,7 +292,6 @@ export function Contact() {
                   </form>
                 )}
               */}
-            </div>
           </div>
         </div>
       </section>

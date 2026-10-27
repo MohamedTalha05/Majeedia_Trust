@@ -83,6 +83,8 @@ export interface Project {
   location: string;
   year: string;
   status: ProjectStatus;
+  /** Support-area id whose detail page this project links to (ongoing projects only). */
+  supportArea: string;
   description: I18n;
   support: I18n;
   outcome: I18n;
@@ -169,10 +171,13 @@ export interface LegalInfo {
 export interface Settings {
   contactEmail: string;
   contactNote: I18n;
+  contactAddress: string;
+  contactPhones: string[];
   facebookUrl: string;
   instagramUrl: string;
   linkedinUrl: string;
   youtubeUrl: string;
+  xUrl: string;
   supportButtonEnabled: boolean;
   supportButtonLabel: I18n;
   supportButtonUrl: string;

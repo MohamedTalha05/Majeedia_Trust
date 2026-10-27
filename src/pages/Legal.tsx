@@ -3,7 +3,7 @@ import { Fragment } from 'react';
 import { href } from '../../shared/routes';
 import type { LegalInfo } from '../../shared/types';
 import { CtaLink, PageHeader, Value } from '../components/ui';
-import { IMPRINT, PRIVACY, type LegalText } from '../i18n/legal-texts';
+import { IMPRINT, PRIVACY, TERMS, type LegalText } from '../i18n/legal-texts';
 import { tx, useApp } from '../lib/app-context';
 
 const LEGAL_FIELDS = [
@@ -53,6 +53,32 @@ export function LegalStatus() {
   );
 }
 
+/** Splits a paragraph into text/link segments and renders emails and URLs as anchor elements. */
+function renderParagraph(
+  paragraph: string,
+  fill: (s: string) => React.ReactNode,
+): React.ReactNode {
+  const linkPattern = /([\w.+-]+@[\w-]+\.[\w.]+|https?:\/\/[^\s]+)/g;
+  const parts = paragraph.split(linkPattern);
+  return parts.map((part, i) => {
+    if (/^[\w.+-]+@[\w-]+\.[\w.]+$/.test(part)) {
+      return (
+        <a key={i} href={`mailto:${part}`} className="text-brass-deep underline hover:no-underline">
+          {part}
+        </a>
+      );
+    }
+    if (/^https?:\/\//.test(part)) {
+      return (
+        <a key={i} href={part} target="_blank" rel="noopener noreferrer" className="text-brass-deep underline hover:no-underline">
+          {part}
+        </a>
+      );
+    }
+    return <Fragment key={i}>{fill(part)}</Fragment>;
+  });
+}
+
 function LegalDocument({ title, text }: { title: string; text: LegalText }) {
   const { lang, content } = useApp();
   const legal = content.legal;
@@ -80,16 +106,18 @@ function LegalDocument({ title, text }: { title: string; text: LegalText }) {
       <PageHeader eyebrow={title} title={title} />
       <section className="py-14 sm:py-20">
         <div className="container-site max-w-3xl">
-          <p className="flex items-start gap-3 rounded-2xl border border-brass/40 bg-white p-5 text-[0.95rem]">
-            <Info aria-hidden className="mt-0.5 size-5 shrink-0 text-brass-deep" />
-            {text.notice}
-          </p>
+          {text.notice && (
+            <p className="flex items-start gap-3 rounded-2xl border border-brass/40 bg-white p-5 text-[0.95rem]">
+              <Info aria-hidden className="mt-0.5 size-5 shrink-0 text-brass-deep" />
+              {text.notice}
+            </p>
+          )}
           {text.sections.map((s) => (
             <section key={s.title} className="mt-10">
               <h2 className="text-2xl font-medium">{s.title}</h2>
               <div className="prose-site mt-4 whitespace-pre-line">
                 {s.paragraphs.map((p) => (
-                  <p key={p}>{fill(p)}</p>
+                  <p key={p}>{renderParagraph(p, fill)}</p>
                 ))}
               </div>
             </section>
@@ -108,4 +136,9 @@ export function Privacy() {
 export function Imprint() {
   const { lang, t } = useApp();
   return <LegalDocument title={t.nav.imprint} text={IMPRINT[lang]} />;
+}
+
+export function Terms() {
+  const { lang, t } = useApp();
+  return <LegalDocument title={t.nav.terms} text={TERMS[lang]} />;
 }

@@ -1,12 +1,15 @@
 {
-  "contactEmail": "",
+  "contactEmail": "support@majeedia.org",
   "contactNote": {
     "en": ""
   },
-  "facebookUrl": "",
-  "instagramUrl": "",
-  "linkedinUrl": "",
+  "contactAddress": "G6, Sathya Apartment No. 1, Dr. Thomas Road 2nd Street, T. Nagar, Chennai 600017",
+  "contactPhones": ["+91 9444135055", "044 – 24348300"],
+  "facebookUrl": "https://www.facebook.com/profile.php?id=61594431735624",
+  "instagramUrl": "https://www.instagram.com/majeedia_trust/",
+  "linkedinUrl": "https://www.linkedin.com/company/majeediatrust/home/",
   "youtubeUrl": "",
+  "xUrl": "https://x.com/MajeediaTrusts",
   "supportButtonEnabled": true,
   "supportButtonLabel": {
     "en": "Donate"
@@ -14,3 +17,4 @@
   "supportButtonUrl": "https://donate.myfundbox.com/multi?data=2Afko6t8UhbezCYW9xO40g",
   "photosAreIllustrative": true
 }
+

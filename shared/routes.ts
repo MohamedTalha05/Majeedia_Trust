@@ -17,7 +17,8 @@ export type PageKey =
   | 'contact'
   | 'legal'
   | 'privacy'
-  | 'imprint';
+  | 'imprint'
+  | 'terms';
 
 /** Pages that have a fixed nav label (everything except detail pages). */
 export type NavKey = Exclude<PageKey, 'supportDetail' | 'updateDetail'>;
@@ -39,6 +40,7 @@ export const PATHS: Record<PageKey, Record<Lang, string>> = {
   legal: { en: 'legal-status-governance' },
   privacy: { en: 'privacy-policy' },
   imprint: { en: 'imprint' },
+  terms: { en: 'terms-and-conditions' },
 };
 
 /** The parent page shown in breadcrumbs (home is always the root). */

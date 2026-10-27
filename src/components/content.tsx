@@ -123,8 +123,10 @@ export function FaqList({ faqs }: { faqs: Faq[] }) {
 }
 
 export function ProjectCard({ project }: { project: Project }) {
-  const { lang, t } = useApp();
+  const { lang, t, content } = useApp();
   const p = t.projects;
+  // Ongoing projects open the detail page of their support area.
+  const detail = project.status === 'ongoing' ? content.categories.find((c) => c.id === project.supportArea) : undefined;
   const statusTone =
     project.status === 'completed' ? 'bg-sage/15 text-sage' : project.status === 'ongoing' ? 'bg-brass/15 text-brass-deep' : 'bg-sand text-muted';
   const sections = [
@@ -132,7 +134,9 @@ export function ProjectCard({ project }: { project: Project }) {
     { label: p.outcome, text: tx(project.outcome, lang) },
   ].filter((s) => s.text);
   return (
-    <article className="flex flex-col overflow-hidden rounded-2xl border border-line bg-white shadow-card">
+    <article
+      className={`flex flex-col overflow-hidden rounded-2xl border border-line bg-white shadow-card ${detail ? 'group relative transition-shadow duration-300 hover:shadow-lift' : ''}`}
+    >
       {project.photos[0] && (
         <div className="aspect-[16/9] overflow-hidden bg-sand">
           <Img src={project.photos[0]} alt={tx(project.photoAlt, lang)} className="h-full w-full" />
@@ -174,6 +178,16 @@ export function ProjectCard({ project }: { project: Project }) {
               </div>
             ))}
           </dl>
+        )}
+        {detail && (
+          <Link
+            to={href(lang, 'supportDetail', detail.slug[lang])}
+            className="mt-auto inline-flex items-center gap-2 pt-5 text-sm font-semibold text-brass-deep after:absolute after:inset-0 group-hover:text-ink"
+          >
+            {p.viewDetails}
+            <span aria-hidden>→</span>
+            <span className="sr-only">: {tx(project.name, lang)}</span>
+          </Link>
         )}
       </div>
     </article>

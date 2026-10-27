@@ -77,18 +77,167 @@ export const PRIVACY: Record<Lang, LegalText> = {
 
 export const IMPRINT: Record<Lang, LegalText> = {
   en: {
-    notice: 'The imprint will be completed once the Trust’s legal details have been confirmed.',
+    notice: '',
     sections: [
-      { title: 'Information pursuant to § 5 DDG', paragraphs: ['{legalName}', '{address}'] },
-      { title: 'Represented by', paragraphs: ['{representative}'] },
-      { title: 'Contact', paragraphs: ['Phone: {phone}', 'Email: {imprintEmail}'] },
-      { title: 'Register entry', paragraphs: ['{register}'] },
-      { title: 'VAT identification number', paragraphs: ['{vat}'] },
-      { title: 'Responsible for content pursuant to § 18(2) MStV', paragraphs: ['{contentResponsible}'] },
       {
-        title: 'Liability for content and links',
+        title: 'Organisation Information',
         paragraphs: [
-          'We prepare the content of this website with care and publish only verified information. We cannot, however, guarantee that the content is complete, accurate and up to date at all times. This website contains links to external websites over whose content we have no control; the respective provider is always responsible for the content of linked pages. If we become aware of any infringement, we will remove such links immediately.',
+          'Majeedia Trust\nG6, Sathya Apartment No.1,\nDr. Thomas Road 2nd Street,\nT. Nagar, Chennai 600017',
+          'Website: https://majeedia.org',
+          'Email: support@majeedia.org',
+          'Telephone: 044 \u2013 24348300',
+        ],
+      },
+      {
+        title: 'Registration Details',
+        paragraphs: [
+          'Registration Number:',
+        ],
+      },
+      {
+        title: 'Disclaimer \u2013 Website Content',
+        paragraphs: [
+          'Majeedia Trust endeavors to keep the information on this website accurate and up to date. However, information may occasionally be incomplete or require updates. If you identify an error or have a question about any content, please contact us.',
+        ],
+      },
+      {
+        title: 'Disclaimer \u2013 External Links',
+        paragraphs: [
+          'This website may contain links to external websites operated by third parties. Majeedia Trust does not control the content of those websites. Responsibility for the content of external websites rests with their respective operators.',
+        ],
+      },
+      {
+        title: 'Copyright',
+        paragraphs: [
+          'Unless otherwise stated, the text, photographs, graphics, and other materials created for this website are intended for use by Majeedia Trust. Reproduction, distribution, or other use of these materials may require prior permission from the relevant rights holder.',
+          'Third-party materials remain the property of their respective owners. If you believe any material on this website infringes your rights, please contact us so that we can review the matter.',
+        ],
+      },
+      {
+        title: 'Donations and Charitable Activities',
+        paragraphs: [
+          'Majeedia Trust provides information about its charitable initiatives, including education support, sponsorship, medical assistance, and other community support activities.',
+          'Online donations may be processed through our designated donation platform. Please refer to the applicable donation terms and privacy policy for further information about payment processing and personal data.',
+        ],
+      },
+      {
+        title: 'Contact for Legal and Website Enquiries',
+        paragraphs: [
+          'Majeedia Trust',
+          'Email: support@majeedia.org',
+          'Website: https://majeedia.org',
+        ],
+      },
+    ],
+  },
+};
+
+export const TERMS: Record<Lang, LegalText> = {
+  en: {
+    notice:
+      'Items marked "[To be confirmed]" have not yet been verified by Majeedia Trust and should be reviewed before publication.',
+    sections: [
+      {
+        title: '1. Introduction and Acceptance of Terms',
+        paragraphs: [
+          'Welcome to the Majeedia Trust website. By accessing or using this website, you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, please do not use this website.',
+          'These Terms and Conditions apply to all visitors and users of https://majeedia.org and govern your use of the website and any services or information provided through it.',
+          'Majeedia Trust reserves the right to update these Terms and Conditions at any time. Any changes will be published on this page with a revised effective date. Continued use of the website after changes are published constitutes acceptance of the revised terms.',
+        ],
+      },
+      {
+        title: '2. About Majeedia Trust and This Website',
+        paragraphs: [
+          'Majeedia Trust is a family-led charitable initiative committed to responsible, transparent and sustainable giving. The Trust supports individuals, families and community projects across areas including education, widow support, girls\u2019 education, disability support, welfare and masjid projects.',
+          'This website provides information about Majeedia Trust, its charitable activities, its family fund, and ways to support the Trust\u2019s work. It also facilitates online donations for live charitable programmes.',
+          'Majeedia Trust operates as a family-led charitable initiative. [To be confirmed: details of formal registration, legal structure and jurisdiction will be published once officially verified.]',
+        ],
+      },
+      {
+        title: '3. Use of Website Content and Information',
+        paragraphs: [
+          'The information on this website is provided for general information purposes only. Majeedia Trust endeavours to keep the information accurate and up to date; however, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability or suitability of the information for any particular purpose.',
+          'You may browse and share content from this website for personal, non-commercial and informational purposes, provided you attribute the content to Majeedia Trust and do not alter it.',
+          'You must not use this website in any way that is unlawful, harmful, or that may bring Majeedia Trust into disrepute.',
+        ],
+      },
+      {
+        title: '4. Donations and Charitable Activities',
+        paragraphs: [
+          'Majeedia Trust accepts online donations for its live charitable programmes through a designated third-party donation platform. By making a donation, you agree to the terms and conditions of that platform as well as these Terms and Conditions.',
+          'All donations are voluntary. Majeedia Trust will use donations responsibly in accordance with its charitable objectives. Donations are allocated to the charitable programmes and projects described on the website at the time of donation, unless Majeedia Trust communicates otherwise.',
+          '[To be confirmed: whether donations are eligible for tax deductions or any other tax benefit under applicable law. No tax benefit should be assumed or promised unless officially confirmed.]',
+          'Majeedia Trust does not guarantee any specific charitable outcome from a donation. Charitable results depend on many factors beyond the Trust\u2019s control.',
+        ],
+      },
+      {
+        title: '5. Online Donation Processing and Third-Party Payment Platforms',
+        paragraphs: [
+          'Online donations made through this website are processed by a third-party payment platform. Majeedia Trust does not directly collect or store your payment card details.',
+          'By proceeding with an online donation, you acknowledge that you are subject to the terms, conditions and privacy policy of the third-party payment platform. Majeedia Trust is not responsible for any errors, losses or issues arising from the use of the third-party platform.',
+          'If you have a question or concern about a donation payment, please contact us at support@majeedia.org.',
+        ],
+      },
+      {
+        title: '6. Sponsorship and Charitable Programme Information',
+        paragraphs: [
+          'Information about sponsorship and charitable programmes on this website is provided to describe Majeedia Trust\u2019s work and the people it supports. All information about beneficiaries is anonymised and aggregated to protect the dignity and privacy of the individuals concerned.',
+          'Majeedia Trust reserves the right to adjust, close or modify any charitable programme at any time, subject to the responsible use of any funds already received.',
+          '[To be confirmed: specific sponsorship terms, programme commitments and beneficiary criteria will be confirmed by Majeedia Trust before publication.]',
+        ],
+      },
+      {
+        title: '7. Intellectual Property and Copyright',
+        paragraphs: [
+          'Unless otherwise stated, all text, photographs, graphics, logos and other materials on this website are the property of Majeedia Trust or its licensors and are protected by applicable copyright and intellectual property laws.',
+          'You may not reproduce, distribute, publish, transmit or create derivative works from any content on this website without prior written permission from Majeedia Trust, except where expressly permitted.',
+          'Third-party materials used on this website remain the property of their respective owners. If you believe any content on this website infringes your intellectual property rights, please contact us at support@majeedia.org so that we may review the matter.',
+        ],
+      },
+      {
+        title: '8. External Website Links',
+        paragraphs: [
+          'This website may contain links to external websites operated by third parties. These links are provided for convenience and informational purposes only. Majeedia Trust does not endorse, control or take responsibility for the content, privacy practices or availability of any external website.',
+          'Clicking on external links is at your own risk. We encourage you to read the terms and privacy policies of any external website you visit.',
+        ],
+      },
+      {
+        title: '9. Website Availability and Accuracy of Information',
+        paragraphs: [
+          'Majeedia Trust does not guarantee that this website will be available at all times or that it will be free from errors, interruptions or security vulnerabilities. We reserve the right to suspend, withdraw or restrict access to any part of the website at any time without notice.',
+          'Information on this website may be updated or changed without notice. Only verified information is published; items still being confirmed are marked accordingly.',
+        ],
+      },
+      {
+        title: '10. Limitation of Liability',
+        paragraphs: [
+          'To the fullest extent permitted by applicable law, Majeedia Trust shall not be liable for any direct, indirect, incidental, consequential or special loss or damage arising from your use of, or reliance on, this website or its content.',
+          'Nothing in these Terms and Conditions limits or excludes liability that cannot be excluded under applicable law, including liability for fraud, personal injury or death caused by negligence.',
+          '[To be confirmed: specific liability provisions should be reviewed by a qualified legal adviser familiar with applicable law before publication.]',
+        ],
+      },
+      {
+        title: '11. Privacy and Personal Data',
+        paragraphs: [
+          'Majeedia Trust processes personal data in accordance with its Privacy Policy, which is available on this website. By using this website, you acknowledge and agree to the processing of your personal data as described in the Privacy Policy.',
+          'Please do not send sensitive personal information such as identification documents, bank details or medical information through any contact form or email.',
+        ],
+      },
+      {
+        title: '12. Changes to These Terms',
+        paragraphs: [
+          'Majeedia Trust may update these Terms and Conditions from time to time to reflect changes in the law, our charitable activities or our website. The most current version will always be available at https://majeedia.org/en/terms-and-conditions.',
+          'We encourage you to review these terms periodically. Material changes will be communicated on this page.',
+        ],
+      },
+      {
+        title: '13. Contact',
+        paragraphs: [
+          'If you have any questions about these Terms and Conditions, please contact us:',
+          'Majeedia Trust\nG6, Sathya Apartment No. 1,\nDr. Thomas Road 2nd Street,\nT. Nagar, Chennai 600017',
+          'Email: support@majeedia.org',
+          'Website: https://majeedia.org',
+          'Telephone: 044 \u2013 24348300',
         ],
       },
     ],

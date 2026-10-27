@@ -12,7 +12,9 @@ export function Projects() {
   const [params, setParams] = useSearchParams();
   const query = params.get('q') ?? '';
   const category = PROJECT_CATEGORIES.includes(params.get('category') as ProjectCategory) ? (params.get('category') as ProjectCategory) : '';
-  const status = PROJECT_STATUSES.includes(params.get('status') as ProjectStatus) ? (params.get('status') as ProjectStatus) : '';
+  // Ongoing projects are shown by default; "all" shows every status.
+  const statusParam = params.get('status');
+  const status = statusParam === 'all' ? '' : PROJECT_STATUSES.includes(statusParam as ProjectStatus) ? (statusParam as ProjectStatus) : 'ongoing';
 
   const update = (key: string, value: string) => {
     const next = new URLSearchParams(params);
@@ -61,11 +63,11 @@ export function Projects() {
               <label className="md:w-56">
                 <span className="sr-only">{p.status}</span>
                 <select
-                  value={status}
-                  onChange={(e) => update('status', e.target.value)}
+                  value={status || 'all'}
+                  onChange={(e) => update('status', e.target.value === 'ongoing' ? '' : e.target.value)}
                   className="w-full rounded-full border border-line bg-white px-4 py-3 text-ink focus:border-brass focus:outline-none"
                 >
-                  <option value="">{p.allStatuses}</option>
+                  <option value="all">{p.allStatuses}</option>
                   {PROJECT_STATUSES.map((s) => (
                     <option key={s} value={s}>
                       {p.statuses[s]}

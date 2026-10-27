@@ -17,7 +17,7 @@ export const VALUE_ICONS = {
   community: Users,
 } as const;
 
-/** Photos that cross-fade behind the home hero (decorative, so no alt text). */
+/** Photos that cross-fade behind the home hero (decorative, so no alt text); kept as black & white copies in /images/hero. */
 const HERO_SLIDES = ['children-learning', 'madrasa-learning', 'girls-education', 'community-welfare', 'masjid-community'];
 
 export function Home() {
@@ -33,8 +33,8 @@ export function Home() {
           {HERO_SLIDES.map((name, i) => (
             <img
               key={name}
-              src={`/images/${name}-1280.webp`}
-              srcSet={`/images/${name}-640.webp 640w, /images/${name}-1280.webp 1280w`}
+              src={`/images/hero/${name}-1280.webp`}
+              srcSet={`/images/hero/${name}-640.webp 640w, /images/hero/${name}-1280.webp 1280w`}
               sizes="100vw"
               alt=""
               loading={i === 0 ? 'eager' : 'lazy'}

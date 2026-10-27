@@ -11,7 +11,7 @@ import { Faq, NotFound } from './pages/Faq';
 import { Fund } from './pages/Fund';
 import { Home } from './pages/Home';
 import { Impact } from './pages/Impact';
-import { Imprint, LegalStatus, Privacy } from './pages/Legal';
+import { Imprint, LegalStatus, Privacy, Terms } from './pages/Legal';
 import { Projects } from './pages/Projects';
 import { Story } from './pages/Story';
 import { Support, SupportDetail } from './pages/Support';
@@ -36,6 +36,7 @@ const PAGES: Record<PageKey | 'notFound', ComponentType> = {
   legal: LegalStatus,
   privacy: Privacy,
   imprint: Imprint,
+  terms: Terms,
   notFound: NotFound,
 };
 

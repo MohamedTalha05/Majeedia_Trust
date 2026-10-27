@@ -1,1 +1,263 @@
-[]
+[
+  {
+    "id": "school-maintenance-sponsorship",
+    "name": {
+      "en": "School - Maintenance Sponsorship"
+    },
+    "category": "community",
+    "location": "",
+    "year": "",
+    "status": "ongoing",
+    "supportArea": "other-initiatives",
+    "description": {
+      "en": "Sponsorship for the upkeep and maintenance of school buildings, so that pupils and teachers can learn and work in a safe environment."
+    },
+    "support": {
+      "en": ""
+    },
+    "outcome": {
+      "en": ""
+    },
+    "photos": [
+      "/images/school-maintenance"
+    ],
+    "photoAlt": {
+      "en": "A newly rebuilt two-storey school building with brick columns and freshly painted walls"
+    },
+    "photoConsent": true,
+    "order": 1,
+    "published": true
+  },
+  {
+    "id": "education-sponsorship",
+    "name": {
+      "en": "Education Sponsorship"
+    },
+    "category": "education",
+    "location": "",
+    "year": "",
+    "status": "ongoing",
+    "supportArea": "education",
+    "description": {
+      "en": "Sponsorship that helps children and students continue their education when their families cannot meet the costs alone."
+    },
+    "support": {
+      "en": ""
+    },
+    "outcome": {
+      "en": ""
+    },
+    "photos": [
+      "/images/children-learning"
+    ],
+    "photoAlt": {
+      "en": "Children sitting on the carpet of a mosque as a teacher writes on the blackboard, the girls in headscarves"
+    },
+    "photoConsent": true,
+    "order": 2,
+    "published": true
+  },
+  {
+    "id": "girls-hifz-sponsorship",
+    "name": {
+      "en": "Girls’ Hifz Sponsorship"
+    },
+    "category": "girls-education",
+    "location": "",
+    "year": "",
+    "status": "ongoing",
+    "supportArea": "girls-education",
+    "description": {
+      "en": "Sponsorship for girls memorising the Holy Quran through Hifz programmes."
+    },
+    "support": {
+      "en": ""
+    },
+    "outcome": {
+      "en": ""
+    },
+    "photos": [
+      "/images/madrasa-learning"
+    ],
+    "photoAlt": {
+      "en": "Seen from above, two girls in headscarves reading the Quran on prayer mats"
+    },
+    "photoConsent": true,
+    "order": 3,
+    "published": true
+  },
+  {
+    "id": "medical-support-sponsorship",
+    "name": {
+      "en": "Medical Support Sponsorship"
+    },
+    "category": "welfare",
+    "location": "",
+    "year": "",
+    "status": "ongoing",
+    "supportArea": "widow-support",
+    "description": {
+      "en": "Sponsorship for individuals and families facing essential medical needs that they cannot meet alone."
+    },
+    "support": {
+      "en": ""
+    },
+    "outcome": {
+      "en": ""
+    },
+    "photos": [
+      "/images/medical-support"
+    ],
+    "photoAlt": {
+      "en": "A doctor with a stethoscope talking with a patient across a desk in a hospital consulting room"
+    },
+    "photoConsent": true,
+    "order": 4,
+    "published": true
+  },
+  {
+    "id": "sponsor-widow-handicap-destitute",
+    "name": {
+      "en": "Sponsor a Widow / Handicap / Destitute"
+    },
+    "category": "widow-support",
+    "location": "",
+    "year": "",
+    "status": "ongoing",
+    "supportArea": "",
+    "description": {
+      "en": "Sponsorship for widows, people with disabilities and destitute families facing financial or essential living needs."
+    },
+    "support": {
+      "en": ""
+    },
+    "outcome": {
+      "en": ""
+    },
+    "photos": [
+      "/images/widow-destitute-support"
+    ],
+    "photoAlt": {
+      "en": "Women in headscarves carrying boxes of donated food supplies along a dirt road"
+    },
+    "photoConsent": true,
+    "order": 5,
+    "published": true
+  },
+  {
+    "id": "education-fee-for-students",
+    "name": {
+      "en": "Education Fee For Students"
+    },
+    "category": "education",
+    "location": "",
+    "year": "",
+    "status": "completed",
+    "supportArea": "",
+    "description": {
+      "en": "Support towards education fees for students whose families needed help to keep them in school."
+    },
+    "support": {
+      "en": ""
+    },
+    "outcome": {
+      "en": ""
+    },
+    "photos": [
+      "/images/girls-education"
+    ],
+    "photoAlt": {
+      "en": "Girls in headscarves writing in their exercise books at a classroom desk"
+    },
+    "photoConsent": true,
+    "order": 6,
+    "published": true
+  },
+  {
+    "id": "charity-to-poor",
+    "name": {
+      "en": "Charity To Poor"
+    },
+    "category": "welfare",
+    "location": "",
+    "year": "",
+    "status": "completed",
+    "supportArea": "",
+    "description": {
+      "en": "Charitable support for poor families to help meet essential everyday needs."
+    },
+    "support": {
+      "en": ""
+    },
+    "outcome": {
+      "en": ""
+    },
+    "photos": [
+      "/images/charitable-giving"
+    ],
+    "photoAlt": {
+      "en": "Women in headscarves handing out bags of food and supplies under a tree"
+    },
+    "photoConsent": true,
+    "order": 7,
+    "published": true
+  },
+  {
+    "id": "charity-to-orphans",
+    "name": {
+      "en": "Charity To Orphans"
+    },
+    "category": "community",
+    "location": "",
+    "year": "",
+    "status": "completed",
+    "supportArea": "",
+    "description": {
+      "en": "Charitable support for orphaned children and the families caring for them."
+    },
+    "support": {
+      "en": ""
+    },
+    "outcome": {
+      "en": ""
+    },
+    "photos": [
+      "/images/community-welfare"
+    ],
+    "photoAlt": {
+      "en": "Three young women in headscarves smiling as they read a sheet of paper together"
+    },
+    "photoConsent": true,
+    "order": 8,
+    "published": true
+  },
+  {
+    "id": "student-aid-fund",
+    "name": {
+      "en": "Student Aid Fund"
+    },
+    "category": "education",
+    "location": "",
+    "year": "",
+    "status": "completed",
+    "supportArea": "",
+    "description": {
+      "en": "A fund providing financial aid to students to help them continue their studies."
+    },
+    "support": {
+      "en": ""
+    },
+    "outcome": {
+      "en": ""
+    },
+    "photos": [
+      "/images/school-classroom"
+    ],
+    "photoAlt": {
+      "en": "A teacher at the front of a bright, newly renovated classroom full of pupils"
+    },
+    "photoConsent": true,
+    "order": 9,
+    "published": true
+  }
+]

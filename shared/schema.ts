@@ -94,6 +94,7 @@ export const COLLECTIONS = {
       { key: 'location', type: 'text', label: 'Location', help: 'Town or region only, never a personal address.' },
       { key: 'year', type: 'text', label: 'Year' },
       { key: 'status', type: 'select', label: 'Status', options: PROJECT_STATUSES },
+      { key: 'supportArea', type: 'text', label: 'Detail page (support-area id)', help: 'Ongoing projects link to this What We Support page, e.g. education.' },
       { key: 'description', type: 'i18n-textarea', label: 'Description' },
       { key: 'support', type: 'i18n-textarea', label: 'Support provided' },
       { key: 'outcome', type: 'i18n-textarea', label: 'Outcome' },
@@ -214,6 +215,7 @@ export const COLLECTIONS = {
       { key: 'instagramUrl', type: 'url', label: 'Instagram URL' },
       { key: 'linkedinUrl', type: 'url', label: 'LinkedIn URL' },
       { key: 'youtubeUrl', type: 'url', label: 'YouTube URL' },
+      { key: 'xUrl', type: 'url', label: 'X (Twitter) URL' },
       {
         key: 'supportButtonEnabled',
         type: 'boolean',
