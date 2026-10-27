@@ -7,6 +7,8 @@
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <!--app-head-->
+    <style>.donate-view [data-learn-more] { visibility: hidden; }</style>
+    <script>if (/[?&]donate(&|=|$)/.test(location.search)) document.documentElement.classList.add('donate-view');</script>
   </head>
   <body>
     <div id="root"><!--app-html--></div>

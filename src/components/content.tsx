@@ -35,8 +35,18 @@ export function CategoryIcon({ name, className = 'size-5' }: { name: string; cla
   return <Icon aria-hidden className={className} />;
 }
 
-export function CategoryCard({ category }: { category: Category }) {
+/** With `actions`, the card shows Donate Now / Learn More buttons instead of a whole-card link. */
+export function CategoryCard({
+  category,
+  actions = false,
+  sizes = '(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw',
+}: {
+  category: Category;
+  actions?: boolean;
+  sizes?: string;
+}) {
   const { lang, t } = useApp();
+  const detailHref = href(lang, 'supportDetail', category.slug[lang]);
   return (
     <article className="reveal group relative flex flex-col overflow-hidden rounded-2xl border border-line bg-white shadow-card transition-shadow duration-300 hover:shadow-lift">
       <div className="relative aspect-[4/3] overflow-hidden bg-sand">
@@ -44,7 +54,7 @@ export function CategoryCard({ category }: { category: Category }) {
           <Img
             src={category.image}
             alt={tx(category.imageAlt, lang)}
-            sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+            sizes={sizes}
             className="h-full w-full transition-transform duration-700 group-hover:scale-[1.04]"
           />
         )}
@@ -55,14 +65,34 @@ export function CategoryCard({ category }: { category: Category }) {
       <div className="flex flex-1 flex-col p-6">
         <h3 className="text-xl font-medium">{tx(category.title, lang)}</h3>
         <p className="mt-3 flex-1 text-[0.95rem] leading-relaxed text-muted">{tx(category.summary, lang)}</p>
-        <Link
-          to={href(lang, 'supportDetail', category.slug[lang])}
-          className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brass-deep after:absolute after:inset-0 group-hover:text-ink"
-        >
-          {t.common.exploreArea}
-          <span aria-hidden>→</span>
-          <span className="sr-only">: {tx(category.title, lang)}</span>
-        </Link>
+        {actions ? (
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Link
+              to={detailHref}
+              className="inline-flex flex-1 items-center justify-center gap-2 rounded-full border border-ink/20 px-5 py-2.5 text-sm font-semibold text-ink transition-colors duration-200 hover:border-ink/50 hover:bg-sand"
+            >
+              {t.support.learnMore}
+              <span aria-hidden>→</span>
+              <span className="sr-only">: {tx(category.title, lang)}</span>
+            </Link>
+            <Link
+              to={`${detailHref}?donate`}
+              className="inline-flex flex-1 items-center justify-center rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-ivory shadow-card transition-colors duration-200 hover:bg-deep-2"
+            >
+              {t.support.donateNow}
+              <span className="sr-only">: {tx(category.title, lang)}</span>
+            </Link>
+          </div>
+        ) : (
+          <Link
+            to={detailHref}
+            className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brass-deep after:absolute after:inset-0 group-hover:text-ink"
+          >
+            {t.common.exploreArea}
+            <span aria-hidden>→</span>
+            <span className="sr-only">: {tx(category.title, lang)}</span>
+          </Link>
+        )}
       </div>
     </article>
   );
