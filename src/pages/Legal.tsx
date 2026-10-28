@@ -12,17 +12,27 @@ const LEGAL_FIELDS = [
   'registrationNumber',
   'jurisdiction',
   'establishedDate',
-  'trustees',
   'registeredAddress',
   'charitableStatus',
   'taxStatus',
-  'donationEligibility',
-  'zakatGovernance',
 ] as const satisfies readonly (keyof LegalInfo)[];
+
+/** Details confirmed by the Trust for this page; a value entered in Site content takes precedence. */
+const CONFIRMED: Partial<Record<(typeof LEGAL_FIELDS)[number], string>> = {
+  legalName: 'Majeedia Educational and Charitable Trust',
+  registrationType: 'Charitable Trust',
+  registrationNumber: '4/80/2019',
+  jurisdiction: 'Tamil Nadu, India',
+  establishedDate: '03/07/2019',
+  registeredAddress: 'G6, Sathya Apartment\nNo. 1, Dr. Thomas Road, 2nd Street\nT. Nagar, Chennai – 600017',
+  taxStatus: 'Section 12A',
+};
 
 export function LegalStatus() {
   const { lang, t, content } = useApp();
   const l = t.legal;
+  // Fields without a confirmed value are left out rather than shown as placeholders.
+  const rows = LEGAL_FIELDS.map((key) => ({ key, value: tx(content.legal[key], lang) || CONFIRMED[key] })).filter((r) => r.value);
   return (
     <>
       <PageHeader eyebrow={l.eyebrow} title={l.title} lead={l.lead} />
@@ -33,12 +43,10 @@ export function LegalStatus() {
             {l.note}
           </p>
           <dl className="mt-10 divide-y divide-line overflow-hidden rounded-2xl border border-line bg-white shadow-card">
-            {LEGAL_FIELDS.map((key) => (
+            {rows.map(({ key, value }) => (
               <div key={key} className="grid gap-1 px-6 py-4 sm:grid-cols-3 sm:gap-6">
                 <dt className="font-medium text-ink">{l.fields[key]}</dt>
-                <dd className="whitespace-pre-line sm:col-span-2">
-                  <Value>{tx(content.legal[key], lang)}</Value>
-                </dd>
+                <dd className="whitespace-pre-line sm:col-span-2">{value}</dd>
               </div>
             ))}
           </dl>

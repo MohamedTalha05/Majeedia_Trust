@@ -9,13 +9,14 @@ export function Footer() {
   const { lang, t } = useApp();
 
   const groups: { title: string; items: NavKey[] }[] = [
-    { title: t.common.footerExplore, items: ['support', 'projects', 'impact', 'fund', 'vision', 'updates'] },
-    { title: t.common.footerTrust, items: ['about', 'story', 'faq', 'contact', 'legal'] },
+    { title: t.common.footerExplore, items: ['support', 'projects', 'impact', 'fund', 'updates'] },
+    { title: t.common.footerTrust, items: ['about', 'story', 'vision', 'faq', 'contact'] },
   ];
   const legal = [
     { label: t.nav.privacy, to: href(lang, 'privacy'), hrefLang: lang },
     { label: t.nav.imprint, to: href(lang, 'imprint'), hrefLang: lang },
     { label: t.nav.terms, to: href(lang, 'terms'), hrefLang: lang },
+    { label: t.nav.legal, to: href(lang, 'legal'), hrefLang: lang },
   ];
   return (
     <footer className="relative overflow-hidden bg-deep text-ivory/75">
