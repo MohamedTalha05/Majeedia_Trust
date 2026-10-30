@@ -91,7 +91,7 @@ export const IMPRINT: Record<Lang, LegalText> = {
       {
         title: 'Registration Details',
         paragraphs: [
-          'Registration Number:',
+          'Registration Number: 4/80/2019',
         ],
       },
       {

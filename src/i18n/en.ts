@@ -352,29 +352,52 @@ export const en = {
   impact: {
     eyebrow: 'Impact & transparency',
     title: 'Impact & Transparency',
-    lead: 'We want to show clearly how family-supported resources are used. Only verified figures are published; anything still being confirmed is marked as such.',
+    lead: 'We want to show clearly how family-supported resources are used. Only verified figures are published.',
     statsTitle: 'Our impact',
-    transparencyTitle: 'Giving with Responsibility. Managing with Transparency.',
-    transparencyText: [
-      'Majeedia Trust is building a system that allows the family and its administrators to keep an accurate, reviewable record of the fund: what comes in, what goes out and what it achieves.',
-      'Beneficiary information is never published. Where we share information about support given, it is anonymised and aggregated.',
+    statsText: 'Only figures that have been verified are shown here.',
+    commitmentTitle: 'Giving with Responsibility. Managing with Transparency.',
+    commitmentText: [
+      'Majeedia Trust believes that charitable giving should be supported by responsible management, clear records and thoughtful decisions. We aim to communicate how funds are received, allocated and used across our charitable activities.',
+      'Our approach is built on accountability, careful recordkeeping, and respect for the dignity and privacy of the people we support.',
     ],
-    trackedTitle: 'What is being tracked',
-    tracked: [
-      'Starting fund',
-      'Family contributions',
-      'Zakat contributions, where applicable',
-      'Annual contributions',
-      'Beneficiary support',
-      'Project expenses',
-      'Maintenance expenses',
-      'Masjid projects',
-      'Education projects',
-      'Other charitable allocations',
+    manageTitle: 'How we manage funds',
+    manage: [
+      { title: 'Recording contributions', text: 'We keep records of funds received from family contributions and other applicable sources.' },
+      { title: 'Planning allocations', text: 'We identify the charitable purpose for which funds are intended.' },
+      { title: 'Tracking expenditure', text: 'We record project-related spending and operational or maintenance expenses separately where applicable.' },
+      { title: 'Reviewing records', text: 'We check the available financial information before publishing totals or reports.' },
+      { title: 'Communicating clearly', text: 'We explain published figures in context, including the reporting period and the type of funds covered.' },
     ],
+    trackTitle: 'How we track our impact',
+    trackText: 'Impact is assessed through information relevant to each programme, such as:',
+    track: [
+      'Number of beneficiaries supported, once verified',
+      'Education and sponsorship assistance provided',
+      'Medical assistance allocated',
+      'Maintenance and project expenditure recorded',
+      'Contributions received and funds allocated during the reporting period',
+      'Progress updates for completed or ongoing initiatives',
+    ],
+    trackNote:
+      'Figures are published only when the underlying information has been reviewed. Where information is still being compiled, it will be published after confirmation.',
     overviewTitle: 'Fund Overview',
     overviewText: 'Verified totals by type, from the family fund ledger. Amounts in Indian rupees.',
-    overviewEmpty: 'The fund overview will be published here once the figures have been verified.',
+    overviewEmpty: 'The financial summary will be published here after the relevant records have been reviewed.',
+    readingTitle: 'Reading the figures',
+    reading: [
+      { term: 'Contributions', text: 'Money received by the fund.' },
+      { term: 'Allocations', text: 'Money set aside for a programme or purpose. An allocation is not the same as money already spent.' },
+      { term: 'Expenditure', text: 'Money actually spent and recorded.' },
+    ],
+    summaryIncludesTitle: 'Where verified records are available, a summary covers',
+    summaryIncludes: [
+      'The reporting period',
+      'Opening balance, where applicable',
+      'Contributions received',
+      'Funds allocated to each programme',
+      'Expenditure recorded',
+      'Remaining balance, where applicable',
+    ],
     inflows: 'Contributions',
     allocations: 'Allocations',
     type: 'Type',
@@ -391,8 +414,6 @@ export const en = {
       'education-project': 'Education projects',
       'other-allocation': 'Other charitable allocations',
     },
-    reportsTitle: 'Reports',
-    reportsText: 'Reports are added as they are prepared and reviewed.',
     reportTypes: {
       'annual-report': 'Annual Reports',
       'fund-overview': 'Fund Overview',
@@ -400,11 +421,14 @@ export const en = {
       'impact-report': 'Impact Reports',
       'financial-summary': 'Financial Summary',
     },
-    noReports: 'No report published yet.',
-    download: 'View document',
-    privacyTitle: 'Our privacy commitment',
+    privacyTitle: 'Protecting beneficiary privacy',
+    privacyIntro:
+      'Transparency should never come at the expense of personal dignity. Majeedia Trust aims to share meaningful information about its work while protecting the identities and personal circumstances of beneficiaries. Where appropriate, impact information is presented in aggregated or anonymised form, and sensitive personal details are not published.',
     privacyText:
       'We never publish beneficiary names without consent, personal addresses, phone numbers, bank details, identification documents or private family information.',
+    closingTitle: 'Our continuing commitment',
+    closingText:
+      'Transparency is an ongoing responsibility. As records are reviewed and programmes develop, Majeedia Trust aims to improve the information available to donors and supporters. Our goal is to make it easier to understand the purpose of our work, how resources are managed, and the progress we can responsibly report.',
   },
 
   fund: {
@@ -435,7 +459,11 @@ export const en = {
       'Questions of Zakat eligibility are matters of religious guidance. Details of how Zakat is governed will be published once confirmed.',
     circleTitle: 'Growing the Circle of Giving',
     circleText:
-      'Majeedia Trust is currently supported primarily through its close family network. As the Trust develops, it may explore opportunities to receive support from trusted friends, well-wishers and other supporters, where appropriate and legally permitted.',
+      'We Majeedia Trust requests the donors to contribute to any one or to all the projects, such as widow pension, Religious education, madrasa education, to read Quranic and Hifz-Quran by girls, medical support for poor patients, disability support, pension to destitute — besides maintaining school buildings structures, electricity and water-pumping charges to overhead tanks for cleanliness and the health of the students.',
+    circleText2:
+      'At present, about 50 children get Quranic education, and elderly women learn recital of the Quran, and other Matured Girls do Hifz (memorise) the whole Quran, from morning at 9 AM to 3 PM.',
+    circleText3:
+      'We request you to donate your Sadaqah, Zakat and other gifts for the sustainability of the above projects every month in denominations of ₹200 and multiples such as ₹200, ₹400, ₹600, etc., every month.',
     circleChannelsTitle: 'Possible future support channels',
     circleChannels: [
       'Trusted personal networks',
@@ -445,6 +473,7 @@ export const en = {
       'Other legally permitted sources',
     ],
     circleNote: 'Online donations are open for the Trust’s live sponsorship programmes.',
+    circleDonorAppeal: 'Online donations are open for the Trust’s live sponsorship programmes.',
   },
 
   vision: {

@@ -202,6 +202,8 @@ export function Home() {
               {t.fund.circleTitle}
             </h2>
             <p className="mt-4 text-lg">{t.fund.circleText}</p>
+            <p className="mt-4 text-lg">{t.fund.circleText2}</p>
+            <p className="mt-4 text-base font-medium text-brass-deep">{t.fund.circleText3}</p>
             <p className="mt-4 text-sm text-muted">{t.fund.circleNote}</p>
           </div>
         </div>
